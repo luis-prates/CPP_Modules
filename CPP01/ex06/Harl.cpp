@@ -6,7 +6,7 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 00:19:47 by lprates           #+#    #+#             */
-/*   Updated: 2022/06/15 01:57:40 by lprates          ###   ########.fr       */
+/*   Updated: 2022/06/15 01:56:59 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,26 @@ void	Harl::complain(std::string level)
 	void	(Harl::*fPointer[])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 	int		i = -1;
 	std::string	levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	enum eLevel {DEBUG, INFO, WARNING, ERROR};
 
 	while(levels[++i] != level && !levels[i].empty())
 		continue ;
-	(this->*fPointer[i])();
+	switch (i)
+	{
+		case eLevel(DEBUG):
+			(this->*fPointer[0])();
+			
+		case eLevel(INFO):
+			(this->*fPointer[1])();
+			
+		case eLevel(WARNING):
+			(this->*fPointer[2])();
+			
+		case eLevel(ERROR):
+			(this->*fPointer[3])();
+			break;
+		default:
+			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+			break;
+	}
 }
