@@ -1,0 +1,31 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/12 17:15:44 by lprates           #+#    #+#             */
+/*   Updated: 2022/06/12 18:35:57 by lprates          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "HumanA.hpp"
+
+HumanA::HumanA(std::string name, Weapon &weapon) : _name(name), _weapon(weapon)
+{
+}
+
+HumanA::~HumanA()
+{
+}
+
+void	HumanA::attack(void)
+{
+	std::cout << _name << " attacks with their " << _weapon.getType() << std::endl;
+}
+
+void	HumanA::setWeapon(Weapon &weapon)
+{
+	this->_weapon = weapon;
+}
