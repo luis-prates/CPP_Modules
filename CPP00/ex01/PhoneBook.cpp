@@ -6,7 +6,7 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 20:30:02 by lprates           #+#    #+#             */
-/*   Updated: 2022/06/11 17:46:57 by lprates          ###   ########.fr       */
+/*   Updated: 2022/06/18 18:35:03 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int PhoneBook::getContactCount()
 	int	count;
 
 	count = 0;
-	while (this->_contacts[count].getFirstName() != "")
+	while (count < 8 && this->_contacts[count].getFirstName().empty() == false)
 		count++;
 	return (count);
 }
