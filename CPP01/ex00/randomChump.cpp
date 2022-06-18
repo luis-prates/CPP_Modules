@@ -6,7 +6,7 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 19:15:05 by lprates           #+#    #+#             */
-/*   Updated: 2022/06/11 20:38:13 by lprates          ###   ########.fr       */
+/*   Updated: 2022/06/18 19:07:12 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void	RandomChump(std::string name)
 {
-	Zombie	*zombie = new Zombie(name);
-	zombie->announce();
-	delete zombie;
+	Zombie	chump(name);
+	chump.announce();
 }
