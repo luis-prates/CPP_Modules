@@ -6,7 +6,7 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/12 17:15:19 by lprates           #+#    #+#             */
-/*   Updated: 2022/06/12 18:36:13 by lprates          ###   ########.fr       */
+/*   Updated: 2022/06/19 14:34:43 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Weapon::~Weapon()
 {
 }
 
-const std::string	Weapon::getType(void) const
+const std::string	&Weapon::getType(void) const
 {
 	return (this->_type);
 }
