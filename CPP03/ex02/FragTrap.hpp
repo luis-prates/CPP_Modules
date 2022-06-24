@@ -6,7 +6,7 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 01:18:52 by lprates           #+#    #+#             */
-/*   Updated: 2022/06/22 01:18:52 by lprates          ###   ########.fr       */
+/*   Updated: 2022/06/24 22:49:23 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class FragTrap : public ClapTrap
 		FragTrap &operator=(FragTrap const &src);
 		~FragTrap();
 
-		void highFiveGuys();
+		void highFivesGuys();
 		void attack(const std::string &target);
 };
 

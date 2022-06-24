@@ -6,7 +6,7 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 01:18:43 by lprates           #+#    #+#             */
-/*   Updated: 2022/06/22 01:18:43 by lprates          ###   ########.fr       */
+/*   Updated: 2022/06/24 23:34:56 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 	this->_energyPoints = 100;
 	this->_attackDamage = 30;
 	std::cout << "Allow me to introduce myself -- I am a FR4G-TP " << this->_name << " steward robot, but my friends call me FragTrap " << this->_name \
-		<< "! Or they would, if any of them were still alive. Or had existed in the first place!" \
 		<< std::endl;
 }
 
@@ -63,11 +62,19 @@ void FragTrap::highFivesGuys()
 
 void FragTrap::attack(const std::string &target)
 {
-	if (!this->_energyPoints || this->_hitPoints <= 0)
+	if (this->_energyPoints <= 0)
+	{
+		std::cout << "FragTrap " << this->_name << " is out of energy!" << std::endl;
 		return ;
-
+	}
+	if (this->_hitPoints <= 0)
+	{
+		std::cout << "FragTrap " << this->_name << " is out of hit points!" << std::endl;
+		return ;
+	}
 	std::cout << \
 		"FragTrap " << this->_name << " attacks " << target << ", causing " << this->_attackDamage << " points of damage!" \
 		<< std::endl;
 	this->_energyPoints--;
+	return ;
 }

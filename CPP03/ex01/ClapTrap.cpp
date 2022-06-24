@@ -6,7 +6,7 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 23:45:45 by lprates           #+#    #+#             */
-/*   Updated: 2022/06/24 22:21:34 by lprates          ###   ########.fr       */
+/*   Updated: 2022/06/24 23:19:32 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,7 @@ void	ClapTrap::attack(const std::string &target)
 		"ClapTrap " << this->_name << " attacks " << target << ", causing " << this->_attackDamage << " points of damage!" \
 		<< std::endl;
 	this->_energyPoints--;
+	return ;
 }
 
 void	ClapTrap::beRepaired(unsigned int amount)
@@ -112,6 +113,7 @@ void	ClapTrap::beRepaired(unsigned int amount)
 		"ClapTrap " << this->_name << " has repaired itself gaining " << amount << " hit points! Has " << this->_hitPoints << "!" \
 		<< std::endl;
 	this->_energyPoints--;
+	return ;
 }
 
 void	ClapTrap::takeDamage(unsigned int amount)
@@ -122,9 +124,18 @@ void	ClapTrap::takeDamage(unsigned int amount)
 		return ;
 	}
 	this->_hitPoints -= amount;
+	if (this->_hitPoints <= 0)
+	{
+		this->_hitPoints = 0;
+		std::cout << \
+		"ClapTrap " << this->_name << " has been killed by an enemy!" \
+		<< std::endl;
+		return ;
+	}
 	std::cout << \
 		"ClapTrap " << this->_name << " took " << amount << " of damage, having " << this->_hitPoints << " hit points remaining!" \
 		<< std::endl;
+	return ;
 }
 
 std::string		ClapTrap::getName()

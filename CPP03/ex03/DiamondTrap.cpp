@@ -6,7 +6,7 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 01:23:28 by lprates           #+#    #+#             */
-/*   Updated: 2022/06/22 01:23:28 by lprates          ###   ########.fr       */
+/*   Updated: 2022/06/24 22:54:19 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ DiamondTrap::DiamondTrap(std::string name) : _name(name)
 	this->_energyPoints = ScavTrap::_energyPoints;
 	this->_hitPoints = FragTrap::_hitPoints;
 	std::cout << "Allow me to introduce myself -- I am a DI4MOND-TP " << this->_name << " steward robot, but my friends call me DiamondTrap " << this->_name \
-		<< "! Or they would, if any of them were still alive. Or had existed in the first place!" \
 		<< std::endl;
 }
 

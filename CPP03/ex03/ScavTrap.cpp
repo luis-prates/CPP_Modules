@@ -6,7 +6,7 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 19:05:03 by lprates           #+#    #+#             */
-/*   Updated: 2022/06/21 19:05:03 by lprates          ###   ########.fr       */
+/*   Updated: 2022/06/24 23:35:09 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	this->_energyPoints = 50;
 	this->_attackDamage = 20;
 	std::cout << "Allow me to introduce myself -- I am a SC4V-TP " << this->_name << " steward robot, but my friends call me ScavTrap " << this->_name \
-		<< "! Or they would, if any of them were still alive. Or had existed in the first place!" \
 		<< std::endl;
 }
 
