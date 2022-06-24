@@ -6,7 +6,7 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 00:50:23 by lprates           #+#    #+#             */
-/*   Updated: 2022/06/24 01:43:48 by lprates          ###   ########.fr       */
+/*   Updated: 2022/06/24 01:57:12 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 AAnimal::~AAnimal()
 {
-    std::cout << "Destructor Animal called." << std::endl;
+    std::cout << "Pure virtual Destructor for Animal called." << std::endl;
 }
 
 void AAnimal::makeSound() const

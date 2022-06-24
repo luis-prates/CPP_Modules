@@ -34,5 +34,7 @@ int main()
 	Dog doge;
 	Dog dogecopy(doge);
 
+	AAnimal notWorking;
+
 	return 0;
 }
