@@ -6,7 +6,7 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 19:05:03 by lprates           #+#    #+#             */
-/*   Updated: 2022/06/21 19:05:03 by lprates          ###   ########.fr       */
+/*   Updated: 2022/06/24 22:20:49 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,7 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
 	this->_attackDamage = 20;
-	std::cout << "Allow me to introduce myself -- I am a SC4V-TP " << this->_name << " steward robot, but my friends call me ScavTrap " << this->_name \
-		<< "! Or they would, if any of them were still alive. Or had existed in the first place!" \
+	std::cout << "Allow me to introduce myself -- I am a SC4V-TP " << this->_name << " steward robot, but my friends call me " << this->_name \
 		<< std::endl;
 }
 
@@ -63,9 +62,16 @@ void ScavTrap::guardGate()
 
 void ScavTrap::attack(const std::string &target)
 {
-	if (!this->_energyPoints || this->_hitPoints <= 0)
+	if (this->_energyPoints <= 0)
+	{
+		std::cout << "ScavTrap " << this->_name << " is out of energy!" << std::endl;
 		return ;
-
+	}
+	if (this->_hitPoints <= 0)
+	{
+		std::cout << "ScavTrap " << this->_name << " is out of hit points!" << std::endl;
+		return ;
+	}
 	std::cout << \
 		"ScavTrap " << this->_name << " attacks " << target << ", causing " << this->_attackDamage << " points of damage!" \
 		<< std::endl;
