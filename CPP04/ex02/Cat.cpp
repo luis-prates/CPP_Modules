@@ -6,16 +6,17 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 00:49:41 by lprates           #+#    #+#             */
-/*   Updated: 2022/06/24 01:45:30 by lprates          ###   ########.fr       */
+/*   Updated: 2022/06/24 01:45:01 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat() : Animal()
+Cat::Cat() : AAnimal()
 {
-	this->_type = "Cat";
 	std::cout << "Default Cat constructor was called" << std::endl;
+	this->_type = "Cat";
+	this->_brain = new Brain();
 }
 
 Cat::Cat(Cat const &src)
@@ -30,6 +31,8 @@ Cat &Cat::operator=(Cat const &src)
 	if (this != &src)
 	{
 		this->_type = src._type;
+		this->_brain = new Brain();
+		*this->_brain = *src._brain;
 	}
 	return *this;
 }
@@ -37,6 +40,7 @@ Cat &Cat::operator=(Cat const &src)
 Cat::~Cat()
 {
 	std::cout << "Destructor Cat called." << std::endl;
+	delete this->_brain;
 }
 
 void Cat::makeSound() const

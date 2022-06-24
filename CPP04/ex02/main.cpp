@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
 #include "WrongAnimal.hpp"
@@ -18,22 +18,21 @@
 
 int main()
 {
-	const Animal* meta = new Animal();
-	const WrongAnimal *wrong = new WrongAnimal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	const WrongAnimal *k = new WrongCat();
-
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound(); //will output the cat sound!
-	j->makeSound();
-	meta->makeSound();
-
-	// wrong animals tests
-	std::cout << k->getType() << " " << std::endl;
-	k->makeSound();
-	wrong->makeSound();
+	AAnimal *animals[10];
+	for (size_t i = 0; i < 10; i++)
+	{
+		if (i < 5)
+			animals[i] = new Dog();
+		else
+			animals[i] = new Cat();
+	}
 	
+
+	for (size_t i = 0; i < 10; i++)
+		delete animals[i];
+
+	Dog doge;
+	Dog dogecopy(doge);
+
 	return 0;
 }
