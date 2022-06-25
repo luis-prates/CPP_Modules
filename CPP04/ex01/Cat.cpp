@@ -6,7 +6,7 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 00:49:41 by lprates           #+#    #+#             */
-/*   Updated: 2022/06/25 15:41:59 by lprates          ###   ########.fr       */
+/*   Updated: 2022/06/25 16:04:37 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,14 @@ Cat::Cat() : Animal()
 	std::cout << "Default Cat constructor was called" << std::endl;
 	this->_type = "Cat";
 	this->_brain = new Brain();
+	std::cout << "Default Cat Brain address: " << this->_brain << std::endl;
 }
 
 Cat::Cat(Cat const &src)
 {
 	std::cout << "Copy Cat constructor called" << std::endl;
 	this->_brain = new Brain();
+	std::cout << "Copy assign Cat Brain address: " << this->_brain << std::endl;
 	*this = src;
 }
 
@@ -33,6 +35,7 @@ Cat &Cat::operator=(Cat const &src)
 	{
 		this->_type = src._type;
 		*this->_brain = *src._brain;
+		std::cout << "Copy assign operator Cat Brain address: " << this->_brain << std::endl;
 	}
 	return *this;
 }
