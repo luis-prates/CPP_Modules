@@ -6,7 +6,7 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 00:49:50 by lprates           #+#    #+#             */
-/*   Updated: 2022/06/24 01:30:51 by lprates          ###   ########.fr       */
+/*   Updated: 2022/06/25 14:02:39 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Dog : public Animal
 		Dog();
 		Dog(Dog const &src);
 		Dog &operator=(Dog const &src);
-		~Dog();
+		virtual ~Dog();
 
 		void makeSound() const;
 

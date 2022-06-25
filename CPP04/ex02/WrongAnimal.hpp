@@ -6,7 +6,7 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 22:51:13 by lprates           #+#    #+#             */
-/*   Updated: 2022/06/23 22:52:58 by lprates          ###   ########.fr       */
+/*   Updated: 2022/06/25 12:23:54 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class WrongAnimal
 		WrongAnimal &operator=(WrongAnimal const &src);
 		~WrongAnimal();
 
-		virtual void makeSound() const;
+		void makeSound() const;
 		std::string getType() const;
 
 	private:

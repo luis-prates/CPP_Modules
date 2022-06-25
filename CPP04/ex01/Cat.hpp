@@ -6,7 +6,7 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 00:49:45 by lprates           #+#    #+#             */
-/*   Updated: 2022/06/24 01:04:01 by lprates          ###   ########.fr       */
+/*   Updated: 2022/06/25 14:02:45 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Cat : public Animal
 		Cat();
 		Cat(Cat const &src);
 		Cat &operator=(Cat const &src);
-		~Cat();
+		virtual ~Cat();
 
 		void makeSound() const;
 

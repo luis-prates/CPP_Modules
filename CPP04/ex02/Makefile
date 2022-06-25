@@ -32,7 +32,7 @@ remove_program:
 # The "all", "${NAME}", "clean", "fclean" and "re" make rules are mandatory
 # by 42's Norm (version 3 at the time of writting this comment).
 
-debug: CXXFLAGS += -DDEBUG -g -fsanitize=address
+debug: CXXFLAGS += -DDEBUG -g #-fsanitize=address
 
 debug: $(NAME) 
 
