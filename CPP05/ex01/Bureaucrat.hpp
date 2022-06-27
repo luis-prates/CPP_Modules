@@ -6,15 +6,18 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:42:15 by lprates           #+#    #+#             */
-/*   Updated: 2022/06/25 20:19:47 by lprates          ###   ########.fr       */
+/*   Updated: 2022/06/27 01:08:01 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BUREAUCRAT_H
-#define BUREAUCRAT_H
+# define BUREAUCRAT_H
 
 # include <iostream>
 # include <string>
+# include "Form.hpp"
+
+class Form;
 
 class Bureaucrat
 {
@@ -27,6 +30,7 @@ class Bureaucrat
 		int					&getGrade();
 		void				incrementGrade();
 		void				decrementGrade();
+		void				signForm(Form &form);
 
 	private:
 		const std::string	_name;
@@ -41,6 +45,11 @@ class Bureaucrat
 		{
 			private:
 				virtual const char* what() const throw ();
+		};
+		class ForbiddenSelfAssign : virtual public std::exception
+		{
+			private:
+				virtual const char *what() const throw();
 		};
 };
 

@@ -6,7 +6,7 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:42:30 by lprates           #+#    #+#             */
-/*   Updated: 2022/06/25 23:44:06 by lprates          ###   ########.fr       */
+/*   Updated: 2022/06/27 00:37:59 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,49 @@ int	main(void)
 	{
 		std::cerr << e.what() << '\n';
 	}
-	std::cout << "End" << std::endl;
-	
+	std::cout << "End mine" << std::endl;
+
+	{
+		try {
+			Bureaucrat buro("Relex", 0);
+		}
+		catch (std::exception & error) {
+			std::cout << error.what() << std::endl;
+		}
+
+		try {
+			Bureaucrat buro("Relex", 151);
+		}
+		catch (std::exception & error) {
+			std::cout << error.what() << std::endl;
+		}
+
+		std::cout << std::endl;
+	}
+	{
+		try {
+			Bureaucrat buro("Relex", 1);
+			buro.incrementGrade();
+		}
+		catch (std::exception & error) {
+			std::cout << error.what() << std::endl;
+		}
+
+		try {
+			Bureaucrat buro("Relex", 150);
+			buro.decrementGrade();
+		}
+		catch (std::exception & error) {
+			std::cout << error.what() << std::endl;
+		}
+
+		std::cout << std::endl;
+	}
+	{
+		Bureaucrat buro("Relex", 115);
+		Bureaucrat bura("Relax", 1);
+
+		std::cout << buro << std::endl;
+		std::cout << bura << std::endl;
+	}
 }

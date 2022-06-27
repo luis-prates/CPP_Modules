@@ -6,7 +6,7 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:42:18 by lprates           #+#    #+#             */
-/*   Updated: 2022/06/25 22:22:30 by lprates          ###   ########.fr       */
+/*   Updated: 2022/06/27 01:14:09 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name)
 {
-
 		if (grade > 150)
 			throw GradeTooLowException();
 		if (grade < 1)
@@ -52,14 +51,29 @@ void Bureaucrat::decrementGrade()
 			throw GradeTooLowException();
 }
 
+void Bureaucrat::signForm(Form &form)
+{
+	if (form.getIsSigned() == true)
+		std::cout << getName() << " signed " << form.getName() << std::endl;
+	else
+		std::cout << getName() << " couldn't sign " << form.getName()
+			<< " because grade too low" << std::endl;
+
+}
+
 const char	*Bureaucrat::GradeTooHighException::what() const throw()
 {
-	return ("Exception: Yo, your grade is too high!!");
+	return ("Bureaucrat Exception: Yo, your grade is too high!!");
 }
 
 const char	*Bureaucrat::GradeTooLowException::what() const throw()
 {
-	return ("Exception: Yo, your grade is too low!!");
+	return ("Bureaucrat Exception: Yo, your grade is too low!!");
+}
+
+const char	*Bureaucrat::ForbiddenSelfAssign::what() const throw ()
+{
+	return ("Cannot copy assign object with const members!");
 }
 
 std::ostream& operator<<(std::ostream &stream, Bureaucrat &buro)

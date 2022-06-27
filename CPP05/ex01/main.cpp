@@ -6,7 +6,7 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:42:30 by lprates           #+#    #+#             */
-/*   Updated: 2022/06/25 22:27:17 by lprates          ###   ########.fr       */
+/*   Updated: 2022/06/27 01:13:01 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,50 @@
 
 int	main(void)
 {
-	try
 	{
-		Bureaucrat bur1("Fry", 100);
-		std::cout << bur1 << std::endl;
-		Bureaucrat bur2("Fry", 2);
-		std::cout << bur2 << std::endl;
-		bur2.incrementGrade();
-		std::cout << bur2 << std::endl;
-		Bureaucrat bur3("Fry", 4);
-		std::cout << bur3 << std::endl;
-		Bureaucrat bur4("Fry", 150);
-		std::cout << bur4 << std::endl;
-		bur4.decrementGrade();
+		Form papel("Student Council", 10, 100);
+		std::cout << papel;
+
+		std::cout << std::endl;
+
+		try {
+			Form papel2("Student Council", 188, 100);
+		}
+		catch (std::exception & error) {
+			std::cout << error.what() << std::endl;
+		}
+
+		try {
+			Form papel3("Student Council", 42, -1);
+		}
+		catch (std::exception & error) {
+			std::cout << error.what() << std::endl;
+		}
 	}
-	catch(const std::exception& e)
+	std::cout << std::endl;
 	{
-		std::cerr << e.what() << '\n';
+		Form papel("Student Council", 10, 100);
+		Form teste;
+		
+		Bureaucrat buro("Wronga", 11);
+		Bureaucrat bura("Relex", 5);
+
+		try {
+			//teste = papel;
+			papel.beSigned(buro);
+		}
+		catch (std::exception & error) {
+			std::cout << error.what() << std::endl;
+		}
+		std::cout << std::endl;
+
+		try {
+			papel.beSigned(bura);
+		}
+		catch (std::exception & error) {
+			std::cout << error.what() << std::endl;
+		}
+
+		std::cout << papel;
 	}
-	std::cout << "End" << std::endl;
 }

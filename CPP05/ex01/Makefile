@@ -4,7 +4,7 @@ CXXFLAGS := -std=c++98 -Wall -Wextra -Werror
 enable_debug := #-g -fsanitize=address
 #header_file := ./minishell.h
 library_option := -l
-NAME := form
+NAME := forms
 #norminette := norminette
 output_name_option := -o
 program_file := ./${NAME}
