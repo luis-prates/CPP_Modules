@@ -6,7 +6,7 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 22:35:55 by lprates           #+#    #+#             */
-/*   Updated: 2022/06/29 00:38:48 by lprates          ###   ########.fr       */
+/*   Updated: 2022/06/29 00:42:55 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,14 @@ void Form::beSigned(Bureaucrat &buro)
 	}
 	else
 		throw GradeTooLowException();
+}
+
+void Form::execute(const Bureaucrat &executor) const
+{
+	if (this->getIsSigned() == true)
+	{
+		if (executor.getGrade())
+	}
 }
 
 std::ostream& operator<<(std::ostream &stream, Form &form)

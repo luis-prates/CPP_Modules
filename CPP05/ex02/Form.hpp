@@ -6,7 +6,7 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 22:35:58 by lprates           #+#    #+#             */
-/*   Updated: 2022/06/29 00:38:32 by lprates          ###   ########.fr       */
+/*   Updated: 2022/06/29 00:37:45 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ class Form
 		
 		// member function
 		void				beSigned(Bureaucrat &buro);
+		void				execute(const Bureaucrat &executor) const;
 
 		class GradeTooLowException : virtual public std::exception
 		{
