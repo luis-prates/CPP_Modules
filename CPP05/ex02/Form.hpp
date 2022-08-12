@@ -6,12 +6,12 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 22:35:58 by lprates           #+#    #+#             */
-/*   Updated: 2022/07/05 00:39:42 by lprates          ###   ########.fr       */
+/*   Updated: 2022/07/10 17:49:36 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FORM_H
-# define FORM_H
+#ifndef FORM_HPP
+# define FORM_HPP
 
 # include <iostream>
 # include <string>

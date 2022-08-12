@@ -6,12 +6,12 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 23:28:08 by lprates           #+#    #+#             */
-/*   Updated: 2022/07/05 00:33:45 by lprates          ###   ########.fr       */
+/*   Updated: 2022/07/10 17:49:36 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef INTERN_H
-#define INTERN_H
+#ifndef INTERN_HPP
+#define INTERN_HPP
 
 # include <iostream>
 # include <string>

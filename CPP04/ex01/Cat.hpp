@@ -6,12 +6,12 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 00:49:45 by lprates           #+#    #+#             */
-/*   Updated: 2022/06/25 14:02:45 by lprates          ###   ########.fr       */
+/*   Updated: 2022/07/10 17:49:36 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_H
-#define CAT_H
+#ifndef CAT_HPP
+#define CAT_HPP
 
 # include "Animal.hpp"
 # include "Brain.hpp"

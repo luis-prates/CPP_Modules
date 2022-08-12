@@ -6,7 +6,7 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 19:39:05 by lprates           #+#    #+#             */
-/*   Updated: 2022/07/06 23:31:56 by lprates          ###   ########.fr       */
+/*   Updated: 2022/07/09 21:52:36 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ Scalar::Scalar(char *str) : _str(static_cast<std::string>(str))
 		return ;
 	else
 	{
-		// If all else fails, you have an invalid argument.
 		_generalValueStatus = eINVALID;
 		_generalValue = 0;
 		return ;	
@@ -62,7 +61,6 @@ Scalar::~Scalar()
     std::cout << "Destructor called." << std::endl;
 }
 
-// Check Special Cases (nan, nanf, +inf, +inff, -inf, -inff)
 int Scalar::checkSpecialCases()
 {
 	if (_str == "nan" || _str == "nanf")
@@ -88,7 +86,6 @@ int Scalar::checkSpecialCases()
 
 int Scalar::checkOneCharCases()
 {
-	// Check one character cases like ("1", "x", "-", " ")
 	if (_str.length() == 1)
 	{
 		_generalValueStatus = eVALID;
@@ -102,7 +99,6 @@ int Scalar::checkOneCharCases()
 
 int Scalar::checkValidInput(char *ptr, double converted)
 {
-	// Check if input is valid or if it finishes with an "f"
 	if (*ptr == '\0' || strcmp(ptr, "f") == 0)
 	{
 		_generalValueStatus = eVALID;
@@ -170,8 +166,14 @@ void Scalar::convertToFloat() {
 		}
 	}
 	else {
+		int precision;
+		if (_str.find('.') != std::string::npos)
+			precision = _str.substr(_str.find_first_of('.'), _str.find_first_of('f')).length() - 2;
+		else
+			precision = 1;
 		float converted = static_cast<float>(_generalValue);
-		std::cout << std::setprecision(4);
+		std::cout << std::fixed;
+		std::cout << std::setprecision(precision);
 		std::cout << "float: " << converted << "f" << std::endl;
 	}
 	return ;

@@ -6,12 +6,12 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 00:50:25 by lprates           #+#    #+#             */
-/*   Updated: 2022/06/25 14:21:38 by lprates          ###   ########.fr       */
+/*   Updated: 2022/07/10 17:49:36 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AANIMAL_H
-#define AANIMAL_H
+#ifndef AANIMAL_HPP
+#define AANIMAL_HPP
 
 # include <iostream>
 # include <string>

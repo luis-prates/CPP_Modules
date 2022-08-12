@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   scalar.hpp                                         :+:      :+:    :+:   */
+/*   Scalar.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 19:39:02 by lprates           #+#    #+#             */
-/*   Updated: 2022/07/06 23:29:23 by lprates          ###   ########.fr       */
+/*   Updated: 2022/07/10 17:49:36 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCALAR_H
-#define SCALAR_H
+#ifndef SCALAR_HPP
+#define SCALAR_HPP
 
 # include <iostream>
 # include <iomanip>

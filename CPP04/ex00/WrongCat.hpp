@@ -6,12 +6,12 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 22:51:19 by lprates           #+#    #+#             */
-/*   Updated: 2022/06/23 22:56:15 by lprates          ###   ########.fr       */
+/*   Updated: 2022/07/10 17:49:36 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGCAT_H
-#define WRONGCAT_H
+#ifndef WRONGCAT_HPP
+#define WRONGCAT_HPP
 
 # include "WrongAnimal.hpp"
 
