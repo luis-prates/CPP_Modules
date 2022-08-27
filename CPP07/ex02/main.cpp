@@ -6,12 +6,12 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 21:35:01 by lprates           #+#    #+#             */
-/*   Updated: 2022/07/17 21:35:01 by lprates          ###   ########.fr       */
+/*   Updated: 2022/08/28 00:52:45 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Array.hpp"
-#define MAX_VAL 20
+#define MAX_VAL 750
 
 void    empty_array_tests()
 {
@@ -226,8 +226,6 @@ void    intra_tests()
     for (int i = 0; i < MAX_VAL; i++)
     {
         numbers[i] = rand();
-        mirror[i] = rand();
-        std::cout << "index: " << i << " numbers value: " << numbers[i] << " mirror value: " << mirror[i] << std::endl; 
     }
     delete [] mirror;
     return ;

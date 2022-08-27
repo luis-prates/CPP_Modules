@@ -6,7 +6,7 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/10 17:42:31 by lprates           #+#    #+#             */
-/*   Updated: 2022/08/28 00:22:42 by lprates          ###   ########.fr       */
+/*   Updated: 2022/07/10 17:42:31 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,4 @@ int main()
     identify(&c);
     Base d;
     identify(d);
-    identify(&d);
 }
