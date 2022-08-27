@@ -6,7 +6,7 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 23:28:08 by lprates           #+#    #+#             */
-/*   Updated: 2022/07/10 17:49:36 by lprates          ###   ########.fr       */
+/*   Updated: 2022/08/27 18:36:46 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ class Intern
 				virtual const char *what() const throw();
 		};
 
-private:
+	private:
 
 };
 

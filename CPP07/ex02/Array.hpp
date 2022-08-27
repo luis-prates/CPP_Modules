@@ -13,9 +13,10 @@
 #ifndef ARRAY_HPP
 # define ARRAY_HPP
 
-#include <cstdio>
-#include <exception>
-#include <iostream>
+# include <cstdio>
+# include <cstdlib>
+# include <exception>
+# include <iostream>
 
 template <class T>
 class Array
@@ -88,7 +89,7 @@ Array<T>  &Array<T>::operator=(const Array& array)
 template <class T>
 T  &Array<T>::operator[](std::size_t idx)
 {
-    if (idx >= size() || idx < 0)
+    if (idx >= size())
         throw OutofBoundsException();
     return (_elements[idx]);
 }
@@ -96,7 +97,7 @@ T  &Array<T>::operator[](std::size_t idx)
 template <class T>
 T  Array<T>::operator[](std::size_t idx) const
 {
-    if (idx >= size() || idx < 0)
+    if (idx >= size())
         throw OutofBoundsException();
     return (_elements[idx]);
 }

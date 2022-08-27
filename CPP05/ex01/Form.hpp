@@ -6,7 +6,7 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 22:35:58 by lprates           #+#    #+#             */
-/*   Updated: 2022/07/10 17:49:36 by lprates          ###   ########.fr       */
+/*   Updated: 2022/08/27 18:09:19 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,10 @@ class Form
 		};
 
 	private:
-	const std::string	_name;
-	bool				_isSigned;
-	const int			_gradeToSign;
-	const int			_gradeToExecute;
+		const std::string	_name;
+		bool				_isSigned;
+		const int			_gradeToSign;
+		const int			_gradeToExecute;
 
 };
 

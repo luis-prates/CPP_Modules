@@ -5,11 +5,10 @@ ShrubberyCreationForm::ShrubberyCreationForm()
     std::cout << "Default constructor was called" << std::endl;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const &src)
+ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const &src) : Form(src)
 {
     std::cout << "Copy constructor called" << std::endl;
-
-    *this = src;
+	*this = src;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(std::string const target) :

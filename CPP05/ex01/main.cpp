@@ -6,7 +6,7 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:42:30 by lprates           #+#    #+#             */
-/*   Updated: 2022/06/27 01:13:01 by lprates          ###   ########.fr       */
+/*   Updated: 2022/08/27 18:15:50 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ int	main(void)
 		Bureaucrat bura("Relex", 5);
 
 		try {
-			//teste = papel;
 			papel.beSigned(buro);
 		}
 		catch (std::exception & error) {

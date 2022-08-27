@@ -5,7 +5,7 @@ PresidentialPardonForm::PresidentialPardonForm()
     std::cout << "Default constructor was called" << std::endl;
 }
 
-PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm const &src)
+PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm const &src) : Form(src)
 {
     std::cout << "Copy constructor called" << std::endl;
     *this = src;

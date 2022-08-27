@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "Array.hpp"
-#define MAX_VAL 750
+#define MAX_VAL 20
 
 void    empty_array_tests()
 {
@@ -226,13 +226,26 @@ void    intra_tests()
     for (int i = 0; i < MAX_VAL; i++)
     {
         numbers[i] = rand();
+        mirror[i] = rand();
+        std::cout << "index: " << i << " numbers value: " << numbers[i] << " mirror value: " << mirror[i] << std::endl; 
     }
-    delete [] mirror;//
+    delete [] mirror;
     return ;
 }
 
 int main()
 {
+    /*Array <int>a(5);
+    Array <int>b(0);
+    try
+    {
+        std::cout << "a: " << a.size() << " b: " << b[1] << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }*/
+    
     empty_array_tests();
     full_array_tests();
     extra_access_tests();

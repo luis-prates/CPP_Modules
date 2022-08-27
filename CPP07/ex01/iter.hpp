@@ -13,7 +13,8 @@
 #ifndef ITER_HPP
 # define ITER_HPP
 
-#include <cstddef>
+# include <cstddef>
+# include <iostream>
 
 // In order to use functions with different return values (outside template)
 // typename and class in template is the same!

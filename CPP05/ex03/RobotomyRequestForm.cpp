@@ -5,7 +5,7 @@ RobotomyRequestForm::RobotomyRequestForm()
     std::cout << "Default constructor was called" << std::endl;
 }
 
-RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const &src)
+RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const &src) : Form(src)
 {
     std::cout << "Copy constructor called" << std::endl;
     *this = src;
