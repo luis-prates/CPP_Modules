@@ -1,5 +1,5 @@
 clear_terminal := clear
-CXX = clang++
+CXX = c++
 CXXFLAGS := -std=c++98 -Wall -Wextra -Werror
 enable_debug := #-g -fsanitize=address
 #header_file := ./minishell.h

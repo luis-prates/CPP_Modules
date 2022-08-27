@@ -6,11 +6,11 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 01:10:18 by lprates           #+#    #+#             */
-/*   Updated: 2022/07/05 01:10:18 by lprates          ###   ########.fr       */
+/*   Updated: 2022/08/27 23:28:04 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "scalar.hpp"
+#include "Scalar.hpp"
 
 int main(int argc, char *argv[])
 {

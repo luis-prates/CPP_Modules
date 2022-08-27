@@ -6,7 +6,7 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 21:58:55 by lprates           #+#    #+#             */
-/*   Updated: 2022/07/10 15:26:31 by lprates          ###   ########.fr       */
+/*   Updated: 2022/08/27 23:52:40 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ Data::Data(Data const &src)
 
 Data::Data(std::string dataType) : _dataType(dataType)
 {
+	std::cout << "Constructor called with dataType value: " << _dataType << std::endl;
 }
 
 Data &Data::operator=(Data const &src)

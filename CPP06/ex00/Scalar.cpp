@@ -6,7 +6,7 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 19:39:05 by lprates           #+#    #+#             */
-/*   Updated: 2022/07/09 21:52:36 by lprates          ###   ########.fr       */
+/*   Updated: 2022/08/27 23:46:18 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ Scalar &Scalar::operator=(Scalar const &src)
 
 Scalar::~Scalar()
 {
-    std::cout << "Destructor called." << std::endl;
+    //std::cout << "Destructor called." << std::endl;
 }
 
 int Scalar::checkSpecialCases()
