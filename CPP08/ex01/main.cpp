@@ -6,7 +6,7 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 16:47:41 by lprates           #+#    #+#             */
-/*   Updated: 2022/08/28 17:30:20 by lprates          ###   ########.fr       */
+/*   Updated: 2022/08/28 18:23:52 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,9 @@ void	test_fill_span()
 	int temp_1[] = {2, 80, 7, 13, 54, 21, 70, 18};
 	std::vector<int> range_nbrs(temp_1, temp_1 + sizeof(temp_1)/sizeof(int));
 	sp.fill_span(range_nbrs.begin(), range_nbrs.end());
-	std::cout << sp.shortestSpan() << std::endl;
-	std::cout << sp.longestSpan() << std::endl;
+	sp.print();
+	std::cout << "Shortest span: " << sp.shortestSpan() << std::endl;
+	std::cout << "Longest span: " << sp.longestSpan() << std::endl;
 
 	std::cout << "Mixed fill Span" << std::endl;
 	Span mix_sp(10);
@@ -38,8 +39,8 @@ void	test_fill_span()
 	mix_sp.addNumber(4);
 	mix_sp.addNumber(5);
 	mix_sp.print();
-	std::cout << mix_sp.shortestSpan() << std::endl;
-	std::cout << mix_sp.longestSpan() << std::endl;
+	std::cout << "Shortest span: " << mix_sp.shortestSpan() << std::endl;
+	std::cout << "Longest span: " << mix_sp.longestSpan() << std::endl;
 
 	std::cout << "Big fill Span" << std::endl;
 	Span large_sp(10001);
@@ -49,8 +50,8 @@ void	test_fill_span()
 	}
 	std::vector<int> big_range(temp_3, temp_3 + sizeof(temp_3)/sizeof(int));
 	large_sp.fill_span(big_range.begin(), big_range.end());
-	std::cout << large_sp.shortestSpan() << std::endl;
-	std::cout << large_sp.longestSpan() << std::endl;
+	std::cout << "Shortest span: " << large_sp.shortestSpan() << std::endl;
+	std::cout << "Longest span: " << large_sp.longestSpan() << std::endl;
 }
 
 void	test_error_span()
@@ -120,8 +121,9 @@ int main()
 	sp.addNumber(17);
 	sp.addNumber(9);
 	sp.addNumber(11);
-	std::cout << sp.shortestSpan() << std::endl;
-	std::cout << sp.longestSpan() << std::endl;
+	sp.print();
+	std::cout << "Shortest span: " << sp.shortestSpan() << std::endl;
+	std::cout << "Longest span: " << sp.longestSpan() << std::endl;
 	std::cout << std::endl;
 	test_fill_span();
 	test_error_span();

@@ -6,7 +6,7 @@
 /*   By: lprates <lprates@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 17:37:44 by lprates           #+#    #+#             */
-/*   Updated: 2022/08/28 18:11:43 by lprates          ###   ########.fr       */
+/*   Updated: 2022/08/28 18:42:08 by lprates          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,6 @@ MutantStack<T, Container>::MutantStack()
 template <typename T, typename Container>
 MutantStack<T, Container>::MutantStack(const MutantStack &mutantStack) : std::stack<T, Container>()
 {
-	
     *this = mutantStack;
     std::cout << "Copy Constructor" << std::endl;
 }
